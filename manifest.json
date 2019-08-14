@@ -1,0 +1,55 @@
+{
+  "name": "ACFun辅助工具",
+  "version": "1.0.0",
+  "description": "ACFun网页版缺失工具的补充。",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.acfun.cn/*"
+      ],
+      "js": [
+        "js/index.js"
+      ],
+      "css": [],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.acfun.cn/v/list110*"
+      ],
+      "js": [
+        "js/v_list110.js"
+      ],
+      "css": [],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "这里可以补充A站网页版本的不足哦。",
+    "default_icon": {
+      "16": "img/logo_16.png",
+      "32": "img/logo_32.png",
+      "48": "img/logo_48.png",
+      "128": "img/logo_128.png"
+    }
+  },
+  "icons": {
+    "16": "img/logo_16.png",
+    "32": "img/logo_32.png",
+    "48": "img/logo_48.png",
+    "128": "img/logo_128.png"
+  },
+  "manifest_version": 2
+}

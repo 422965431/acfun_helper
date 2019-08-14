@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      width: 320px;
+      height: 480px;
+    }
+    #results {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: 440px;
+      overflow-y: scroll;
+    }
+    .item {
+      width: 80px;
+      margin: 4px 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <label>
+    设置黑名单
+    <input id="black-input" type="text" placeholder="UP名">
+  </label>
+  <button id="add-btn">添加</button>
+  <button id='clean-btn'>清空</button>
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
